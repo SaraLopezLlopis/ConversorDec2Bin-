@@ -6,11 +6,16 @@
 # En esta función se quita el "0b" para dejar el "11"
 # ------------------------------------------------------
 def dec2bin(numero_decimal, numero_bits):
-    numero_binario = bin(numero_decimal)
-    numero_binario = numero_binario[2:len(numero_binario)]  # quita el "0b" del principio
+    numero_binario = bin(numero_decimal
+    if numero_decimal >= 0:
+            numero_binario = numero_binario[2:len(numero_binario)]  # quita el "0b" del principio
     
-    while len(numero_binario) < numero_bits:      # añade 0's a la izquierda si hace falta
-        numero_binario = "0" + numero_binario
+        while len(numero_binario) < numero_bits:      # añade 0's a la izquierda si hace falta
+            numero_binario = "0" + numero_binario
+    else:
+        numero_binario = numero_binario[3:len(numero_binario)] # quita el "-0b" del principio
+        while len(numero_binario) < numero_bits: # añade 1's a la izquierda si hace falta
+            numero_binario = "1" + numero_binario
     return numero_binario
 
 # ----------------------------------------
