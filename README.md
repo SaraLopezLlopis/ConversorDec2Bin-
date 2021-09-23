@@ -1,5 +1,5 @@
 # ConversorDec2Bin 
-## explicación 
+## Explicación 
 ### devemos convertir el dato decimal positivo hacia binario
 
 a medida que el numero decimal positivo varía y aumenta de caracteres (numeros) se emplean un numero concreto de bits   
